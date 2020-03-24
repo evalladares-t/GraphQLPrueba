@@ -1,0 +1,30 @@
+{
+  "name": "graphql",
+  "version": "1.0.0",
+  "description": "Primera clase de graphql",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "transpile": "babel ./src --out-dir dist --copy-files",
+    "build": "npm-run-all clean transpile",
+    "server": "node ./dist/main.js",
+    "prod": "NODE_ENV=production npm-run-all build server",
+    "dev": "NODE_ENV=development npm-run-all build server",
+    "watch:dev": "nodemon",
+    "start": "npm run prod"
+  },
+  "author": "Valladares Tavera, Edward Joseph",
+  "license": "MIT",
+  "dependencies": {
+    "graphql-yoga": "^1.18.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "nodemon": "^2.0.2",
+    "rimraf": "^3.0.2",
+    "npm-run-all": "^4.1.5"
+
+  }
+}

@@ -1,0 +1,4 @@
+npm i -S graphql-yoga
+npm i -D @babel/core @babel/cli @babel/preset-env
+npm i -D nodemon
+npm i -D rimraf npm-run-all
